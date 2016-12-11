@@ -5,15 +5,14 @@
         try {
 
             $params  = [
-                'nama'   => $_POST['nama'],
-                'alamat' => $_POST['alamat'],
-                'tlp'    => $_POST['tlp'],
+                ':nama'   => $_POST['nama'],
+                ':alamat' => $_POST['alamat'],
+                ':tlp'    => $_POST['tlp'],
             ];
 
             $sql = "INSERT INTO users (nama,alamat,tlp) VALUES  (:nama,:alamat,:tlp)";
             $stmt= $pdo->prepare($sql);
             $stmt->execute($params);
-
 
             header("location: index.php");
         }

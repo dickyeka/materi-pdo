@@ -16,7 +16,7 @@ $users = $stmt->fetchAll();
 
 
 foreach ($users as $user) {
-    echo $user->info();
+    echo $user->info() .'<br>';
 }
 
 

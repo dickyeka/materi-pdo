@@ -7,8 +7,6 @@ class User
     public $alamat;
     public $tlp;
 
-
-
     public function info()
     {
          return '#'.$this->id.': '.$this->nama.' '.$this->alamat;

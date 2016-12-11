@@ -13,10 +13,19 @@
 
     if(isset($_POST['submit'])){
 
+        $user_id = $_POST['id'];
+        $sql = "SELECT * FROM users WHERE id =:id";
+        $stmt = $pdo->prepare($sql);
+        $stmt->execute([':id'=>$user_id]);
+        $user = $stmt->fetch();
+
+
+        $nama = is_null($_POST['nama']) ? $_POST['nama'] : $user['nama'];
+
         try {
 
             $params =[
-                'nama'       => $_POST['nama'],
+                'nama'       => $nama,
                 'alamat'     => $_POST['alamat'],
                 'tlp'        => $_POST['tlp'],
                 'id'    => $_POST['id'],
