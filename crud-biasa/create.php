@@ -25,21 +25,22 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Tambah Data</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <link rel="stylesheet" href="">
 </head>
 <body>
-<h1>Tambah data</h1>
-<form action="create.php" method="post">
-    <p>Nama</p>
-    <input type="text" name="nama" >
-    <p>Alamat</p>
-    <input type="text" name="alamat" >
-    <p>Tlp</p>
-    <input type="text" name="tlp" >
-    <br>
-    <input type="submit" name="tambah" value="Tambah">
-
-</form>
-
+    <form action="create.php" method="post" accept-charset="utf-8">
+        <p>Nama</p>
+        <input type="text" name="nama" value="" placeholder="" >
+        <p>Alamat</p>
+        <textarea name="alamat" required></textarea>
+        <p>No Tlp</p>
+        <input type="tel" name="tlp" value="" placeholder="">
+        <br>
+        <br>
+        <input type="submit" name="submit" value="submit">
+    </form>
 </body>
 </html>
